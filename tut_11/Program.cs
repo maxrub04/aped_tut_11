@@ -1,5 +1,9 @@
 ﻿using tut_11.Services;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 using tut_11;
 using tut_11.Services;
 
@@ -14,14 +18,12 @@ builder.Services.AddScoped<IPrescriptionService, Prescription_Service>();
 
 // Add Swagger for testing in development
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment()) {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapOpenApi();;
 }
 
 app.UseHttpsRedirection();
