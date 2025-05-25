@@ -1,0 +1,72 @@
+@TUT_11_ = http://localhost:5000
+
+### -- Get Patients Details -- ###
+GET {{TUT_11_}}/api/patients/1
+Accept: application/json
+
+### -- Add Prescription (Already Exists) -- ##
+POST {{TUT_11_}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "1990-01-01"
+  },
+  "doctorId": 1,
+  "date": "2025-05-24",
+  "dueDate": "2025-05-30",
+  "medicaments": [
+    {
+      "medicamentId": 1,
+      "name": "Ibuprofen",
+      "dose": 5,
+      "description": "Take after having meals"
+    }
+  ]
+}
+
+### -- Add Prescription -- ##
+POST {{TUT_11_}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "1990-01-01"
+  },
+  "doctorId": 2,
+  "date": "2025-05-24",
+  "dueDate": "2025-05-30",
+  "medicaments": [
+    {
+      "medicamentId": 2,
+      "dose": 5,
+      "description": "Take 4 times daily for 2 weeks, then lower dose."
+    }
+  ]
+}
+
+### -- Add Prescription -- ##
+POST {{TUT_11_}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "Michael",
+    "lastName": "Olik",
+    "dateOfBirth": "1991-01-01"
+  },
+  "doctorId": 2,
+  "date": "2025-05-25",
+  "dueDate": "2025-05-30",
+  "medicaments": [
+    {
+      "medicamentId": 2,
+      "dose": 15,
+      "description": "Take 2 times daily for 5 weeks, then lower dose."
+    }
+  ]
+}
