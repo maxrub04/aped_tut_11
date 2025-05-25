@@ -1,3 +1,5 @@
+using System;
+
 namespace tut_11.DTOs;
 
 public class PatientDto {

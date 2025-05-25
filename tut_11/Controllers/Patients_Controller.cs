@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using tut_11.DTOs;
 
 namespace tut_11.Controllers;
@@ -10,7 +11,6 @@ public class Patients_Controller : ControllerBase {
     public Patients_Controller(MedicalDbContext context) {
         _context = context;
     }
-
     [HttpGet("{id}")]
     public async Task<ActionResult<PatientDetailsDto>> GetPatient(int id) {
         var patient = await _context.Patients

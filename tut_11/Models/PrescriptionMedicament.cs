@@ -1,5 +1,6 @@
 namespace tut_11.Models;
 
+
 public class PrescriptionMedicament {
     public int IdPrescription { get; set; }
     public Prescription Prescription { get; set; }

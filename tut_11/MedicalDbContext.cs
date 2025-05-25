@@ -2,6 +2,7 @@ using tut_11.Models;
 
 namespace tut_11;
 
+
 public class MedicalDbContext {
     public DbSet<Patient> Patients { get; set; }
     public DbSet<Doctor> Doctors { get; set; }

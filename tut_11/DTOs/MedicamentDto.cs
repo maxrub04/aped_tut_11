@@ -1,5 +1,6 @@
 namespace tut_11.DTOs;
 
+
 public class MedicamentDto {
     public int IdMedicament { get; set; }
     public string Name { get; set; }

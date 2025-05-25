@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace tut_11.DTOs;
 
 public class AddPrescriptionRequest {

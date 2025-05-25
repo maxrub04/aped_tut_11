@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace tut_11.Models;
 
 public class Medicament {
